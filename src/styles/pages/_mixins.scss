@@ -1,0 +1,8 @@
+@mixin opacity($val) {
+	opacity: $val/100;
+	filter: alpha(opacity=$val);
+}
+
+// mixin 文件名前面加了_  不会被编译成css文件 
+// 这个文件直接被引用编译引用的那个文件就行了
+//用于解决兼容问题
