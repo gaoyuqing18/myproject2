@@ -7,7 +7,8 @@ requirejs.config({
 		"jq.cookie" : "scripts/libs/jquery.cookie",
 		"bootstrap" : "scripts/libs/bootstrap",
 		"jquery.ui" : "scripts/libs/jquery-ui",
-		"css" : "scripts/libs/css"  //加载CSS文件的插件
+		"css" : "scripts/libs/css",  //加载CSS文件的插件
+		"template" : "scripts/libs/template-web",
 	},
 	shim : {
 		"jq.cookie" : {
@@ -15,6 +16,7 @@ requirejs.config({
 		},
 		"sw" : {
 			deps : ["css!styles/swiper.css"]
+			//引入css文件
 			//文件位置是编译后的 scss文件已经变成css文件了
 		},
 		"bootstrap" : {

@@ -1,0 +1,1 @@
+"use strict";require("colors");var fs=require("fs");module.exports=function(e,t){var r=fs.readFileSync(__dirname+"/json-data/items.json");t.setHeader("Content-Type","text/plain; charset=utf8"),t.write(r.toString()),t.end()};

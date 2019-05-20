@@ -5,9 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>全棉会员日</title>
+	<script src="../../static/scripts/require.js" data-main="home.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="../../styles/pages/home/home.css">
-    <!-- html文件在服务器运行 页面已经加载完成 没有scss文件了 -->
+	<!-- html文件在服务器运行 页面已经加载完成 没有scss文件了 -->
+	<!-- "'https://res.purcotton.com/'+<%=data.docs[i].prodPicUrl%>" -->
 </head>
+<script id="item_templite" type="text/html">
+	<% for(let i=0; i<6; i++) {%>	
+     <div class="item">
+			<a href="#" title="<%=data.docs[i].title%>" target="_blank">
+				
+				<div class="good-img-wrap">
+						
+					<img src="<%=data.docs[i].prodPicUrl%>" alt="" class="good-img">
+				</div>
+				<div class="good-name">
+					<p class="content"><%=data.docs[i].title%></p>
+				</div>
+				<div class="good-price">
+					
+					<span class="discount-price"><%=data.docs[i].price%></span>
+					<span class="original-price"><%=data.docs[i].original-price%></span>
+					
+				</div>
+				
+			</a>
+		</div>
+		<%}%>
+</script>
 <body> 
      <!-- header start -->
       <header class="comm-header">
@@ -322,20 +347,17 @@
 			
 		</div>
 	</div>
+
 	<div class="section-content list-comm clearfix">
-		
-		
 		<div class="section-two">
 			<div class="bg-img">
 				<a href="#" target="_blank">
-					<img src="https://res.purcotton.com/activity/2019/05/10/qzj/570-360-hot.jpg" alt="">
+					<img src="https://res.purcotton.com/activity/2019/05/10/qzj/570-360-hot.jpg" alt="" id="img12345">
 				</a>
 			</div>
-		</div>
+		</div>	
 		
-		
-		
-		<div class="item">
+		<!-- <div class="item">
 			<a href="#" title="纯棉柔巾100片/盒*6盒" target="_blank">
 				
 				<div class="good-img-wrap">
@@ -458,18 +480,53 @@
 				
 			</a>
 		</div>
-		
+		 -->
 		
 	</div><!-- list-comm end -->
 </div><!-- index-section end -->
 </div><!-- container end -->
 
 </body>
-<script src="../../static/scripts/require.js" data-main="home.js"></script>
+<!-- <script src="../../scripts/libs/template-web.js" type="text/javascript" charset="utf-8"></script> -->
 
-<script>	
-     
-</script>
+<script type="text/javascript">
+
+// let moviesCache = new Map();
+// $(function(){
+// 	var start = 0;
+
+// 	$("#loadmoreBtn").click(function(){
+// 		$.ajax({
+// 			url : "http://localhost:9090/proxy/api.douban.com/v2/movie/in_theaters?count=6&start="+start, 
+// 			dataType: "json",
+// 			success : function(data){
+				
+// 				let movies = data.subjects;
+// 				movies.map(m=>{
+// 					moviesCache.set(m.id, m);
+// 				})
+// 				let tempstr = template("movie-temp", { list : movies });
+// 				$("#movies-wrapper").append(tempstr);
+				
+// 				start += 6;
+// 			}
+// 		});
+// 	})
+
+	// $("#movies-wrapper").on("click", "img", function(){
+
+		
+	// 	let movie = moviesCache.get( this.getAttribute('movieid') );
+	// 	let tempstr = template("movie-detail", movie);
+		
+	// 	$("#modal-wrap").html( tempstr );
+		
+	// 	$("#myModal").modal("show");
+	// 	// console.log(movie);
+		
+	// })
+// })
+	</script>
 </html>
 
 <!-- 此处是为了在页面 引入多个js文件 不是真正的page页面 真正的在style/pages中 -->
