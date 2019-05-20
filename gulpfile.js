@@ -22,12 +22,12 @@ gulp.task("compileJS", () => {
         }))
         .pipe(uglify())
         .pipe(gulp.dest("dist/scripts"))
-    gulp.src("src/pages/**/*.js")
+    gulp.src("src/pages/home/**/*.js")
         .pipe(babel({
             presets: ["@babel/env"]
         }))
         .pipe(uglify())
-        .pipe(gulp.dest("dist/pages"))
+        .pipe(gulp.dest("dist/pages/home"))
     gulp.src("src/static/**/*").pipe(gulp.dest("dist/static"));
 })
 

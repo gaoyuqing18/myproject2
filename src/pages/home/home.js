@@ -2,12 +2,10 @@
 
 require(["../../static/conf/config.js"], function () {
 
-  console.log("你快好吧");
   //找配置文件  使用插件 
   require(["jquery", "sw"], function ($, Swiper) {
     console.log($);
     console.log(Swiper);
-    console.log("你快好吧");
     var mySwiper1 = new Swiper('#ad-banner', {
       autoplay: true,//可选选项，自动滑动
       loop: true,
@@ -46,13 +44,13 @@ require(["../../static/conf/config.js"], function () {
     // })
 
      let section_content = $(".section-content").html();
-    console.log($);
+    console.log(section_content);
     $.ajax({
       url: "/static/json-data/items.json",
       dataType: "json",
       success: function (data) {
         console.log(data);
-        let data = JSON.parse(data);
+        // let data = JSON.parse(data);
         // section_content.innerHTML += template("item_templite", {
         //   data: data,
         // });
