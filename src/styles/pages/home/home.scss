@@ -304,7 +304,7 @@ a:hover {
 
 	// 商品分类展示
 	.index-section .section-two {
-    position: relative;
+   // position: relative;
     float: left;
     width: 570px;
     height: 360px;
@@ -329,16 +329,17 @@ a:hover {
     color: #999999;
     line-height: 134px;
 }
-.section-content {
-	margin-right: -10px;
-}
+// .section-content {
+// 	margin-right: -10px;
+// }
 .list-comm > .item {
+		//clear : both;
+	display: inline-block;
 	position: relative;
-	//clear : both;
-	float: left;
+	//float: left;
 	width: 280px;
 	height: 360px;
-	margin-right: 10px;
+	margin-right: 2px;
 	margin-bottom: 10px;
 	background: #ffffff;
 	border-radius: 10px;
@@ -350,6 +351,7 @@ a:hover {
 .good-img-wrap img{
 	width: 220px;
 	height: 220px;
+	vertical-align: top;
 margin-left: 22px;
 }
 .good-img-wrap img:hover{

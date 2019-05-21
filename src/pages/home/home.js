@@ -43,8 +43,8 @@ require(["../../static/conf/config.js"], function () {
     //   console.log(data);
     // })
 
-    let section_content = $(".section-content").html();
-    //console.log(section_content);
+    let sectionWrap = $(".section-wrap").html();
+    console.log(sectionWrap);
     $.ajax({
       url: "/static/json-data/items.json",
       dataType: "json",
@@ -52,12 +52,12 @@ require(["../../static/conf/config.js"], function () {
         console.log(data);
 
         // droplist.innerHTML = "";//先清空之前获取的 避免累积
+        //$(".section-content")[0].append(tempstr);
 
         let tempstr = template("item_templite", { list: data });
         console.log(tempstr);
-
-        //$(".section-content")[0].append(tempstr);
-         $(".section-content")[0].innerHTML += tempstr;
+        // $(".section-content")[0].html() += tempstr;
+         $(".section-wrap")[0].innerHTML += tempstr;
 
       }
     });

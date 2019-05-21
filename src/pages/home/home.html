@@ -8,30 +8,53 @@
 	<script src="../../static/scripts/require.js" data-main="home.js" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="../../styles/pages/home/home.css">
 	<!-- html文件在服务器运行 页面已经加载完成 没有scss文件了 -->
-	<!-- "'https://res.purcotton.com/'+<%=data.docs[i].prodPicUrl%>" -->
 </head>
 <script id="item_templite" type="text/html">
-	<% for(let i=0; i<5; i++) {%>	
-     <div class="item">
-			<a href="#" title="<%=list.docs[i].title%>" target="_blank">
+	
+
+		<% for(let i=0; i<4; i++) {%>
+		<div class="index-section shop">
+		<div class="section-top clearfix">
+			<div class="fl">
+				<span class="section-title"><%=list.cat[i].categoryTitle%></span>
 				
-				<div class="good-img-wrap">
-						
-					<img src="<%='https://res.purcotton.com/'+list.docs[i].prodPicUrl%>" alt="" class="good-img">
-				</div>
-				<div class="good-name">
-					<p class="content"><%=list.docs[i].title%></p>
-				</div>
-				<div class="good-price">
-					
-					<span class="discount-price">￥<%=list.docs[i].price%></span>
-					<span class="original-price"><%='￥'+(list.docs[i].price+20)%></span>
-					
-				</div>
+					<a href="#" title="<%=list.cat[i].categoryTitle%>" target="_blank" class="more"><%=list.cat[i].findAll%> &gt;</a>
 				
-			</a>
+			</div>
+			<div class="fr">
+				
+			</div>
 		</div>
+	
+		<div class="section-content list-comm clearfix">
+			<div class="section-two">
+				<div class="bg-img">
+					<a href="#" target="_blank">
+						<img src="<%=list.cat[i].bigImgsrc%>" alt="" id="img12345">
+					</a>
+				</div>
+			</div>	
+			
+			<% for(let j=0; j<6; j++) {%>	
+			<div class="item">
+				<a href="#" title="<%=list.cat[i].docs[j].title%>" target="_blank">
+					<div class="good-img-wrap">	
+						<img src="<%='https://res.purcotton.com/'+list.cat[i].docs[j].prodPicUrl%>" alt="" class="good-img">
+					</div>
+					<div class="good-name">
+						<p class="content"><%=list.cat[i].docs[j].title%></p>
+					</div>
+					<div class="good-price">
+						<span class="discount-price">￥<%=list.cat[i].docs[j].price%></span>
+						<span class="original-price"><%='￥'+(list.cat[i].docs[j].price+20)%></span>
+					</div>
+				</a>
+			</div>
+			<%}%> 	
+		</div>
+	</div>
 		<%}%>
+	
 </script>
 <body> 
      <!-- header start -->
@@ -334,160 +357,14 @@
 		</div>
 </div> 
 <!-- 商品分类展示 -->
-<div class="container">
-<div class="index-section shop">
-	<div class="section-top clearfix">
-		<div class="fl">
-			<span class="section-title">会员日-呵护礼</span>
-			
-				<a href="#" title="会员日-呵护礼" target="_blank" class="more">查看全部 &gt;</a>
-			
-		</div>
-		<div class="fr">
-			
-		</div>
-	</div>
 
-	<div class="section-content list-comm clearfix">
-		<div class="section-two">
-			<div class="bg-img">
-				<a href="#" target="_blank">
-					<img src="https://res.purcotton.com/activity/2019/05/10/qzj/570-360-hot.jpg" alt="" id="img12345">
-				</a>
-			</div>
-		</div>	
-		
-		<div class="item">
-			<a href="#" title="纯棉柔巾100片/盒*6盒" target="_blank">
-				
-				<div class="good-img-wrap">
-					<img src="https://res.purcotton.com/images/commodity/001003009/80000000/001000000648/33B07F9D4EC16AB16E8BFC40C918B26E.jpg_357x357.jpg" alt="" class="good-img">
-				</div>
-				<div class="good-name">
-					<p class="content">纯棉柔巾100片/盒*6盒</p>
-				</div>
-				<div class="good-price">
-					
-					<span class="discount-price">¥81</span>
-					<span class="original-price">¥118.8</span>
-					
-				</div>
-				
-			</a>
-		</div>
-		
-		
-		
-		<!-- <div class="item">
-			<a href="#" title="灭菌纯水湿巾10袋" target="_blank">
-				
-				<div class="good-img-wrap">
-					<img src="https://res.purcotton.com/images/commodity/001003011/80000000/106000000174/9D7B3E2289ABB8088CE473D30DA08C70.jpg_357x357.jpg" alt="" class="good-img">
-				</div>
-				<div class="good-name">
-					<p class="content">灭菌纯水湿巾10袋</p>
-				</div>
-				<div class="good-price">
-					
-					<span class="discount-price">¥68</span>
-					<span class="original-price">¥100</span>
-					
-				</div>
-				
-			</a>
-		</div>
-		
-		
-		
-		<div class="item">
-			<a href="#" title="夜用+日夜兼用7包装" target="_blank">
-				
-				<div class="good-img-wrap">
-					<img src="https://res.purcotton.com/images/commodity/004002004/80000000/004000001627/2338C33ADD09343B7C543B9ED2B21D32.jpg_357x357.jpg" alt="" class="good-img">
-				</div>
-				<div class="good-name">
-					<p class="content">夜用+日夜兼用7包装</p>
-				</div>
-				<div class="good-price">
-					
-					<span class="discount-price">¥56</span>
-					<span class="original-price">¥80.3</span>
-					
-				</div>
-				
-			</a>
-		</div>
-		
-		
-		
-		<div class="item">
-			<a href="#" title="34*76cm纱布毛圈面巾" target="_blank">
-				
-				<div class="good-img-wrap">
-					<img src="https://res.purcotton.com/images/commodity/001006002/80000000/001000001090/10000001_00000060/B5BBCE3F0251C931164A0CE4BDE0FE59.jpg_357x357.jpg" alt="" class="good-img">
-				</div>
-				<div class="good-name">
-					<p class="content">34*76cm纱布毛圈面巾</p>
-				</div>
-				<div class="good-price">
-					
-					<span class="discount-price">¥53</span>
-					<span class="original-price">¥78</span>
-					
-				</div>
-				
-			</a>
-		</div>
-		
-		
-		
-		<div class="item">
-			<a href="#" title="酒精消毒棉片 3盒" target="_blank">
-				
-				<div class="good-img-wrap">
-					<img src="https://res.purcotton.com/images/commodity/107001002/80000000/107000000033/7C0A376BCFE5E8355BEA05CB95F64B92.jpg_357x357.jpg" alt="" class="good-img">
-				</div>
-				<div class="good-name">
-					<p class="content">酒精消毒棉片 3盒</p>
-				</div>
-				<div class="good-price">
-					
-					<span class="discount-price">¥65</span>
-					<span class="original-price">¥96</span>
-					
-				</div>
-				
-			</a>
-		</div>
-		
-		
-		
-		<div class="item">
-			<a href="#" title="居家清洁用品组合包 5件套" target="_blank">
-				
-				<div class="good-img-wrap">
-					<img src="https://res.purcotton.com/images/commodity/106004001/80000000/106000000105/84905AC62C90EC90C3DD462385CAEC4C.jpg_357x357.jpg" alt="" class="good-img">
-				</div>
-				<div class="good-name">
-					<p class="content">居家清洁用品组合包 5件套</p>
-				</div>
-				<div class="good-price">
-					
-					<span class="discount-price">¥97</span>
-					<span class="original-price">¥142.4</span>
-					
-				</div>
-				
-			</a>
-		</div>
-		 -->
-		
-	</div><!-- list-comm end -->
-</div><!-- index-section end -->
+<div class="container">
+<section class="section-wrap">
+
+</section>
 </div><!-- container end -->
 
 </body>
-<!-- <script src="../../scripts/libs/template-web.js" type="text/javascript" charset="utf-8"></script> -->
 
 <script type="text/javascript">
 
