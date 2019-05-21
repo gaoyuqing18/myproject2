@@ -11,21 +11,21 @@
 	<!-- "'https://res.purcotton.com/'+<%=data.docs[i].prodPicUrl%>" -->
 </head>
 <script id="item_templite" type="text/html">
-	<% for(let i=0; i<6; i++) {%>	
+	<% for(let i=0; i<5; i++) {%>	
      <div class="item">
-			<a href="#" title="<%=data.docs[i].title%>" target="_blank">
+			<a href="#" title="<%=list.docs[i].title%>" target="_blank">
 				
 				<div class="good-img-wrap">
 						
-					<img src="<%=data.docs[i].prodPicUrl%>" alt="" class="good-img">
+					<img src="<%='https://res.purcotton.com/'+list.docs[i].prodPicUrl%>" alt="" class="good-img">
 				</div>
 				<div class="good-name">
-					<p class="content"><%=data.docs[i].title%></p>
+					<p class="content"><%=list.docs[i].title%></p>
 				</div>
 				<div class="good-price">
 					
-					<span class="discount-price"><%=data.docs[i].price%></span>
-					<span class="original-price"><%=data.docs[i].original-price%></span>
+					<span class="discount-price">￥<%=list.docs[i].price%></span>
+					<span class="original-price"><%='￥'+(list.docs[i].price+20)%></span>
 					
 				</div>
 				
@@ -357,7 +357,7 @@
 			</div>
 		</div>	
 		
-		<!-- <div class="item">
+		<div class="item">
 			<a href="#" title="纯棉柔巾100片/盒*6盒" target="_blank">
 				
 				<div class="good-img-wrap">
@@ -378,7 +378,7 @@
 		
 		
 		
-		<div class="item">
+		<!-- <div class="item">
 			<a href="#" title="灭菌纯水湿巾10袋" target="_blank">
 				
 				<div class="good-img-wrap">

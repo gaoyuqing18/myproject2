@@ -3,9 +3,9 @@
 require(["../../static/conf/config.js"], function () {
 
   //找配置文件  使用插件 
-  require(["jquery", "sw"], function ($, Swiper) {
-    console.log($);
-    console.log(Swiper);
+  require(["jquery", "sw", "template"], function ($, Swiper, template) {
+    // console.log($);
+    // console.log(Swiper);
     var mySwiper1 = new Swiper('#ad-banner', {
       autoplay: true,//可选选项，自动滑动
       loop: true,
@@ -43,18 +43,22 @@ require(["../../static/conf/config.js"], function () {
     //   console.log(data);
     // })
 
-     let section_content = $(".section-content").html();
-    console.log(section_content);
+    let section_content = $(".section-content").html();
+    //console.log(section_content);
     $.ajax({
       url: "/static/json-data/items.json",
       dataType: "json",
       success: function (data) {
         console.log(data);
-        // let data = JSON.parse(data);
-        // section_content.innerHTML += template("item_templite", {
-        //   data: data,
-        // });
+
         // droplist.innerHTML = "";//先清空之前获取的 避免累积
+
+        let tempstr = template("item_templite", { list: data });
+        console.log(tempstr);
+
+        //$(".section-content")[0].append(tempstr);
+         $(".section-content")[0].innerHTML += tempstr;
+
       }
     });
 
