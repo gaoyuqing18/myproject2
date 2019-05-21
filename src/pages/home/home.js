@@ -19,14 +19,14 @@ require(["../../static/conf/config.js"], function () {
       },
     })
     var mySwiper2 = new Swiper('#recom-banner', {
-      autoplay: true,//可选选项，自动滑动
+      autoplay: true,
       loop: true,
       slidesPerView: 'auto',
       loopedSlides: 4,
     })
 
     var mySwiper3 = new Swiper('#pink-recom2', {
-      autoplay: true,//可选选项，自动滑动
+      autoplay: true,
       loop: true,
       slidesPerView: 'auto',
       loopedSlides: 3,
@@ -61,15 +61,5 @@ require(["../../static/conf/config.js"], function () {
   })
 })
 
-    // require(["jquery","template"], function($,template) {
-    //   console.log($);
-    // $(function(){
-    //   console.log("ok");
-
-
-    //   console.log(section_content);
-
-//   })
-// })
 
 
