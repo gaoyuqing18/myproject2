@@ -390,3 +390,38 @@ margin-left: 10px;
 	text-decoration: line-through;
 	color: #999999;
 }
+// 楼梯导航
+#floor{
+	 position: fixed;
+	 width: 70px;
+	 height: 360px;
+	 //background-image: url();
+	 background-color: #fff;
+	 right:70px;
+	 top: 360px; 
+	 display: none;
+}
+#floor li{
+	height: 60px;
+	width: 70px;
+	text-align: center;
+	background-color: #fff;
+	position: relative;
+	cursor: pointer;
+}
+#floor li span{
+	position: absolute;
+	display: block;
+	width: 70px;
+	height: 20px;
+	line-height: 20px;
+	top: 30px;
+}
+#floor li.hover{
+	background-color: rgb(189, 102, 155);
+	
+}
+.footer{
+	height: 850px;
+	background-color: #333333;
+}
