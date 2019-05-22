@@ -393,7 +393,7 @@ margin-left: 10px;
 // 楼梯导航
 #floor{
 	 position: fixed;
-	 width: 70px;
+	 width: 65px;
 	 height: 360px;
 	 //background-image: url();
 	 background-color: #fff;
@@ -403,25 +403,35 @@ margin-left: 10px;
 }
 #floor li{
 	height: 60px;
-	width: 70px;
+	width: 56px;
 	text-align: center;
 	background-color: #fff;
 	position: relative;
 	cursor: pointer;
+		margin:0 auto;
 }
 #floor li span{
+	font-size: 14px;
 	position: absolute;
 	display: block;
-	width: 70px;
+	width: 56px;
 	height: 20px;
 	line-height: 20px;
 	top: 30px;
+	color: #666;
+
 }
 #floor li.hover{
-	background-color: rgb(189, 102, 155);
-	
+	background-color:pink;
+	border-radius: 20px;
+	margin:0 auto;
 }
 .footer{
 	height: 850px;
 	background-color: #333333;
+}
+#floor .iconfont{
+	font-family:"iconfont";
+	font-size:22px;
+	font-style:normal;
 }

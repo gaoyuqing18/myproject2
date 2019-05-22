@@ -51,13 +51,6 @@ require(["../../static/conf/config.js"], function () {
 
     // 楼梯部分
     var click = false;  //避免点击左侧导航与滚动页面同时起作用
-    // $(window).scroll( debounce(function(){//滚动页面时要计算滚动距离 停下来才显示用防抖
-    //   if( $(this).scrollTop() > 1000) {
-    //     $("#floor").show();
-    //   } else {
-    //     $("#floor").hide();
-    //   }
-    // }, 300) );
     $(window).scroll( function(){//滚动页面时要计算滚动距离 停下来才显示用防抖
      console.log($(this).scrollTop());
       if( $(this).scrollTop() > 1000) {
@@ -88,16 +81,6 @@ require(["../../static/conf/config.js"], function () {
 				}
 			}
     })
-   
-    function debounce(fn, delay) {
-      let t = null;
-      return function(){
-        clearTimeout(t);
-        t = setTimeout(()=>{
-          fn()
-        }, delay);
-      }
-    }
 
   })
 })
