@@ -1,6 +1,6 @@
 const gulp = require("gulp");
 const webserver = require("gulp-webserver");
-const express = require("express");
+//const express = require("express");
 const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
 const sass = require("gulp-sass");
@@ -8,7 +8,8 @@ const csso = require("gulp-csso");
 const autoprefixer = require("gulp-autoprefixer");
 // const https = require("https");
 //const http = require("http");
-const fs = require("fs");
+//const fs = require("fs");
+const fileinclude = require("gulp-file-include");
 
 
 //想要用以前项目的package.json  删除node_modules package-lock.json 
@@ -39,10 +40,25 @@ gulp.task("compileCSS", () => {
         .pipe(gulp.dest("dist/styles"))
 })
 
-gulp.task("compileHTML", () => {
+gulp.task("compileHTML",["fileinclude"] ,() => {  
+    //先执行 生成用了公共头部的html文件  
+    //在执行编译任务
     gulp.src("src/pages/**/*.html")
         .pipe(gulp.dest("dist/pages"))
 })
+
+// 引入公共头文件
+gulp.task('fileinclude', function() {
+    gulp.src(['src/pages/home/home.html']) //想要引入公共部分的文件路径，可以写多个
+      .pipe(fileinclude({
+        prefix: '@@', //把公共部分放到@@的地方
+        basepath: './src/pages/common' //公共文件的基础路径 是一个文件夹 
+         //basepath: '@file'
+      }))
+      .pipe(gulp.dest('src/pages/home')); 
+      //先用刚生成的引入了公共部分的home.html 覆盖src中没有公共部分的home.html 在编译html文件到dist文件中
+  }); 
+// gulp.task("default",['fileinclude']);
 
 
 
@@ -65,7 +81,9 @@ gulp.task("server", function () {
 
     //动态接口代理服务器express /home相当于服务器接口
     //端口8000
-    /*
+    /*这个是做一个代理服务器 JS页面还是要用ajax请求数据的  
+      可以在网址那里输入http://localhost:8000/item 看代理服务器能不能拿到数据
+      可以的话 在网址那里输入http://localhost:9999/home/home.html 
     let app = express();
     app.get("/item", (req, res) => {
         res.setHeader("Access-Control-Allow-Origin", "*"); //cors
@@ -99,15 +117,8 @@ gulp.task("server", function () {
     */
 })
 
+
 gulp.task("build", ["compileJS", "compileCSS", "compileHTML"]);
 //buld任务 可以一次执行所有编译任务 项目一开始使用
 //后期某个文件有变化 监听该文件的单个任务就会执行
-// gulp.task("getjson", function(reqinfo, res){
-// 	//请求数据库文件
-// 	let data = fs.readFileSync(__dirname + "/static/json-data/items.json");
-// 	// console.log(data);
-// 	res.setHeader("Content-Type","text/plain; charset=utf8");
 
-// 	res.write(data.toString());
-// 	res.end();
-// })

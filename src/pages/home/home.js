@@ -36,7 +36,7 @@ require(["../../static/conf/config.js"], function () {
    // let sectionWrap = $(".section-wrap").html();
     //console.log(sectionWrap);
     $.ajax({
-      url: "/static/json-data/items.json",
+      url: "/static/json-data/items.json", //如果是服务器代理请求 这里应该请求代理服务器接口/item
       dataType: "json",
       success: function (data) {
         //console.log(data);
