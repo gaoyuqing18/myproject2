@@ -1,2 +1,53 @@
-@import "mixins"
+@import "mixins";
 // 在base文件中引入mixins文件 不用加_ 也不用加后缀名
+@import "../icon/iconfont";
+html,body,input,button{
+    font-family: "思源黑体 CN Light", "微软雅黑", "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    font-size: 16px;
+  }
+  html,body,p,h1,h2,h3,h4,h5,h6,ul,li,figure,figcaption,input,textarea,button,thead,tbody,tr,td,select,option {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    vertical-align: baseline;
+    background: transparent;
+  }
+  body {
+    background: #fff;
+      line-height: none;
+      background: #f8f8f8;
+   
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+  }
+  ul,ol {
+    list-style: none;
+  }
+  dl,dt,dd {
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    border: none;
+  }
+  a {
+    color: #000000;
+    text-decoration: none;
+    outline: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  
+  .fl {
+      float : left;
+  }
+  .fr {
+      float: right;
+  }
+  .container{
+      margin-left: 193px;
+      width: 1150px;
+  }

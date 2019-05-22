@@ -1,0 +1,75 @@
+@import "base";
+// 导航栏
+.comm-top, .top_link a{
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #fff;
+}
+.top_link a {
+	margin : 0 10px;
+}
+.bg-green{
+	background: #00937f;
+}
+.top-bar {
+	height : 80px;
+
+}
+.comm-header .comm-top-wrap{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 1920px;
+	z-index :189;
+}
+.comm-header .top-bar{
+	z-index: 188;
+	position: fixed;
+	top: 30px;
+	left: 0;
+	width: 1920px;
+	background-color: #fff;
+}
+.logo {
+	margin-top: 28px;
+	margin-right: 14px;
+}
+.first-menu-wrap li{
+   float: left;
+   margin: 0 14px;
+   height : 80px;
+   line-height: 80px;
+}
+.first-menu-wrap li a{
+	font-size: 16px;
+    color: #333333;
+}
+.first-menu-wrap span {
+	margin: 28px 14px 0;
+	display: block;
+	float: left;
+	color: #a59f9f;
+	height: 12px;
+}
+.search {
+	height: 30px;
+	width: 148px;
+	margin: 28px 14px 0;
+    padding: 0 34px 0 18px;
+    line-height: 30px;
+    background: #eee;
+	border-radius: 20px;
+	border: 1px solid transparent;
+}
+.search-text {
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px; 
+	color: #000;	
+}
+.search input {
+	outline: none;
+	border-width: 0;
+}
+
