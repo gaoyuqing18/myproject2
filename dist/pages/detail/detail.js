@@ -1,0 +1,1 @@
+"use strict";require(["../../static/conf/config.js"],function(){require(["jquery"],function(n){console.log(n),n(window).load(function(){var o=n("#smallImg").html();console.log(o)})})});

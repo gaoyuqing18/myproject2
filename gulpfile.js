@@ -23,13 +23,23 @@ gulp.task("compileJS", () => {
         }))
         .pipe(uglify())
         .pipe(gulp.dest("dist/scripts"))
+
     gulp.src("src/pages/home/**/*.js")
         .pipe(babel({
             presets: ["@babel/env"]
         }))
         .pipe(uglify())
         .pipe(gulp.dest("dist/pages/home"))
+
     gulp.src("src/static/**/*").pipe(gulp.dest("dist/static"));
+    
+    gulp.src("src/pages/detail/**/*.js")
+    .pipe(babel({
+        presets: ["@babel/env"]
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest("dist/pages/detail"))
+    
 })
 
 gulp.task("compileCSS", () => {

@@ -10,6 +10,11 @@
 </head>
 <body>
      <!-- header start -->
+  <!-- header start -->
+
+ <!-- 这个header页面不会单独执行 只适用于把此标签加入别的页面 
+ 因此不需要引入header.css样式 其他页面样式导入header样式即可 -->
+
  <header class="comm-header">
     <div class="comm-top-wrap bg-green">
         <div class="container">
@@ -82,5 +87,88 @@
     </div>
 </header> 
 
+
+<!-- main start -->
+<div class="container">
+<!-- 商品基本信息（放大镜等） -->
+<div class="goods-basic">
+		<div class="goods-magnifier fl">
+                <div id="smallImg">
+                    <div id="smallCursor" >
+                     
+                    </div>
+                </div>
+                <div id="bigCursor" >
+                    <img id="bigImg" src="../../static/Images/bigImg.jpg_750x600.jpg"/>
+                </div>
+                
+        </div>
+        
+		<div class="goods-msg fr">
+			<!-- <h2 class="goods-title">袋装婴幼儿面部清洁专用纯棉柔巾 100抽/包 6包/提，3提</h2>
+			<p class="detail">婴幼儿洁肤 柔软舒适 湿水使用不易落絮</p>
+			<div class="choose-attrs clearfix tag">
+				<div class="dt">优惠信息：</div>
+				<div class="dd" id="actDivs">
+					
+				</div>
+			</div> -->
+			<!-- <p class="hr"></p>
+			<div class="choose-attrs clearfix">
+				<div class="dt">价　　格：</div>
+				<div class="dd clearfix">
+					<div class="price" id="orgPrice">
+						<span>&yen;324</span>
+					</div>
+					<div class="integral" id="orgIntegral">
+						<span class="title">赠送积分：</span>
+						<span id="integralSp">324</span>
+					</div>
+				</div>
+			</div> -->
+			<!-- <div class="choose-attrs clearfix" id="actDiv" style="display:none;">
+				<div class="dt">活动价格：</div>
+				<div class="dd clearfix">
+					<div class="price">
+						<span class="discount-price">&yen;324</span>
+					</div>
+					<div class="integral" id="actIntegral">
+					</div>
+				</div>
+			</div>
+			  	 				 <div class="choose-attrs clearfix" id="propListId"> 
+			      	 				<div class="dt">象征属性：</div>
+			      	 				<div class="dd">
+			          	 						<a href="javascript:void(0)" onclick="switchHTML('00000000',100,this);" data-id="00000000" data-value="00000000" class="selected hover">无<i class="ie6"></i></a>	
+			          	 					
+			      	 				 </div>
+			  	 				</div> -->
+			<!-- <div class="choose-attrs clearfix">
+				<div class="dt">购买数量：</div>
+				<div class="dd clearfix">
+					<div class="num" ondragstart="return false;" onselectstart="return false;">
+						<input type="text" id="goodsNo" value="1" class="num-input" maxlength="3" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+						<div class="btn-operation reduce" onClick="cutGoodsNo('goodsNo')">-</div>
+						<div class="btn-operation plus" onClick="addGoodsNo('goodsNo')">+</div>
+					</div>
+					<div class="num-info">
+						<span id="stockId">库存0件</span>
+						<span id="salesNum">已售32856件 </span>
+					</div>
+				</div>
+            </div> -->
+            
+			<!-- <p class="hr"></p>
+			<div class="choose-attrs to-buy">
+                    <button type="button" id="jCard" class="btn btn-default btn-green jiacar" ">加入购物车</button>
+                    onclick="addcart('prodNo','goodsNo','leagueCommo')onclick="buynow();" 
+					<button type="button" id="bNow" class="btn btn-default buynow" >立即购买</button>
+					
+            </div> -->
+         
+		</div> <!--  goods-msg end -->
+   </div><!-- goods-basic end --> 
+</div>
+
 </body>
-</html>
+<!-- </html> -->

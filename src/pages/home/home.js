@@ -4,7 +4,7 @@ require(["../../static/conf/config.js"], function () {
 
   //找配置文件  使用插件 
   require(["jquery", "sw", "template"], function ($, Swiper, template) {
-
+  console.log($);
     //  轮播图
     var mySwiper1 = new Swiper('#ad-banner', {
       autoplay: true,//可选选项，自动滑动
@@ -36,7 +36,7 @@ require(["../../static/conf/config.js"], function () {
    // let sectionWrap = $(".section-wrap").html();
     //console.log(sectionWrap);
     $.ajax({
-      url: "/static/json-data/items.json", //如果是服务器代理请求 这里应该请求代理服务器接口/item
+      url: "/static/json-data/catogray.json", //如果是服务器代理请求 这里应该请求代理服务器接口/item
       dataType: "json",
       success: function (data) {
         //console.log(data);
