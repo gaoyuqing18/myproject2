@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>全棉会员日</title>
+	<script src="../../static/scripts/require.js" data-main="home.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../../styles/pages/home/home.css">
+	<!-- <link rel="stylesheet" href="../../styles/icon/iconfont.css"> -->
+	<!-- html文件在服务器运行 页面已经加载完成 没有scss文件了 -->
+</head>
+<script id="item_templite" type="text/html">
+	
+
+		<% for(let i=0; i<4; i++) {%>
+		<div class="index-section shop">
+		<div class="section-top clearfix">
+			<div class="fl">
+				<span class="section-title"><%=list.cat[i].categoryTitle%></span>
+				
+					<a href="#" title="<%=list.cat[i].categoryTitle%>" target="_blank" class="more"><%=list.cat[i].findAll%> &gt;</a>
+				
+			</div>
+			<div class="fr">
+				
+			</div>
+		</div>
+	
+		<div class="section-content list-comm clearfix">
+			<div class="section-two">
+				<div class="bg-img">
+					<a href="../detail/detail.html" target="_blank">
+						<img src="<%=list.cat[i].bigImgsrc%>" alt="" id="img12345">
+					</a>
+				</div>
+			</div>	
+			
+			<% for(let j=0; j<6; j++) {%>	
+			<div class="item">
+				<a href="../detail/detail.html" title="<%=list.cat[i].docs[j].title%>" target="_blank">
+					<div class="good-img-wrap">	
+						<img src="<%='https://res.purcotton.com/'+list.cat[i].docs[j].prodPicUrl%>" alt="" class="good-img">
+					</div>
+					<div class="good-name">
+						<p class="content"><%=list.cat[i].docs[j].title%></p>
+					</div>
+					<div class="good-price">
+						<span class="discount-price">￥<%=list.cat[i].docs[j].price%></span>
+						<span class="original-price"><%='￥'+(list.cat[i].docs[j].price+20)%></span>
+					</div>
+				</a>
+			</div>
+			<%}%> 	
+		</div>
+	</div>
+		<%}%>
+	
+</script>
+<body> 
+    <!-- 引入公共头文件--> 
+ <!-- header start -->
+ <header class="comm-header">
+    <div class="comm-top-wrap bg-green">
+        <div class="container">
+            <div class="comm-top clearfix">
+                <div class="fl">
+                    <p class="slogan">医学贴近生活，全棉呵护健康</p>
+                </div>
+                <div class="top_link fr">
+                    <span id="top_member_new">
+                        <a href="#">登录</a>
+                        <a href="https://www.purcotton.com/mall/memberLogin/toRegister.ihtml">注册</a>
+                    </span>
+                    <span>|</span>
+                    <a href="#" title="联系在线客服">客户服务</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 导航栏 -->
+    <div class="top-bar">
+        <div class="logo-search-wrap">
+            <div class="container">
+                <nav class="nav-bar">
+                    <div class="logo fl">
+                        <a href="https://www.purcotton.com">
+                            <img src="../../static/Images/logo2-3.png" height="20" width="160" alt="purcotton logo">
+                        </a>
+                    </div>         
+                  
+                        <ul class="first-menu-wrap">
+                            <li class="cur">
+                                <a href="https://www.purcotton.com" target="">首页</a>
+                            </li>
+                            <li>
+                                <a href="https://www.purcotton.com/news.html" target="_blank">新品</a>
+                            </li>
+                            <li class="cur">
+                                <a href="https://www.purcotton.com" target="">婴童</a>
+                            </li>
+                            <li>
+                                <a href="https://www.purcotton.com/news.html" target="_blank">女士</a>
+                            </li>
+                            <li class="cur">
+                                <a href="https://www.purcotton.com" target="">家居</a>
+                            </li>
+                            <li>
+                                <a href="https://www.purcotton.com/news.html" target="_blank">男士</a>
+                            </li>
+                            <span>|</span>
+                            <li>
+                                <a href="https://www.purcotton.com/mall/story/index.html" target="">全棉故事</a>
+                            </li>
+                            <li>
+                                <a href="https://www.purcotton.com/mall/dianpu/index.html" target="">全棉店铺</a>
+                            </li>
+                            <li>
+                                <a href="https://www.purcotton.com/mall/community/community.html" target="">全棉社区</a>
+                            </li>
+
+                       </ul>
+
+                    <div class="search-bar clearfix fl">
+                        <div class="fl search">
+                            <input type="text" class="search-text" placeholder="搜索棉柔巾试试" >
+                        </div>
+                    </div>
+             </nav>	
+            </div>
+        </div>
+    </div>
+</header> 
+
+
+    <!-- 轮播图 -->
+     <div class="banner">
+
+        <div class="swiper-container" id="ad-banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="https://www.purcotton.com/mall/activity/2019/0419/p_sjdqr.html">
+                       <img src="../../static/Images/nav1.jpg" height="400" width="1920" alt="purcotton logo">
+                    </a>
+               </div>
+               <div class="swiper-slide">
+                    <a href="https://www.purcotton.com/mall/activity/2019/0419/p_sjdqr.html">
+                       <img src="../../static/Images/nav2.jpg" height="400" width="1920" alt="purcotton logo">
+                    </a>
+               </div>
+               <div class="swiper-slide">
+                    <a href="https://www.purcotton.com/mall/activity/2019/0419/p_sjdqr.html">
+                       <img src="../../static/Images/nav3.jpg" height="400" width="1920" alt="purcotton logo">
+                    </a>
+               </div>
+               <div class="swiper-slide">
+                    <a href="https://www.purcotton.com/mall/activity/2019/0419/p_sjdqr.html">
+                       <img src="../../static/Images/nav4.jpg" height="400" width="1920" alt="purcotton logo">
+                    </a>
+               </div> 
+        </div>
+			 <div class="swiper-button-prev"></div>
+			 <div class="swiper-button-next banner-button-next"></div>
+			
+            <div class="swiper-pagination"></div>
+
+		</div>
+	</div> 
+	 <!-- banner结束 -->
+	
+
+
+    <!-- 全棉四大特点 -->
+    <div class="index-about-wrap">
+		<div class="container">
+			<ul class="index-about clearfix">
+				<li class="li1">
+					<a href="#" title="" target="_blank" rel="nofollow">
+						<span class="desc">医疗背景</span>
+					</a>
+				</li>
+				<li class="li2">
+					<a href="#" title="" target="_blank">
+						<span class="desc">全棉理念</span>
+					</a>
+				</li>
+				<li class="li3">
+					<a href="#" title="全棉会员" target="_blank">
+						<span class="desc">全棉会员</span>
+					</a>
+				</li>
+				<li class="li4">
+					<a href="#" title="">
+						<span class="desc">全棉社区</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+    </div> 
+    
+
+     <div class="recommend-wrap">
+		<div class="container">
+			<div class="recommend clearfix">
+					<div class="fl recommend-tab-wrap">
+						<ul class="recommend-tab">
+							<li class="cur">
+								<div class="recommend-word">
+									<a href="#" title="">婴童热卖</a>
+								</div>
+							</li>
+							<li class="cur">
+								<div class="recommend-word">
+									<a href="#" title="">女士热卖</a>
+								</div>
+							</li>
+							<li class="cur">
+								<div class="recommend-word">
+									<a href="#" title="">居家热卖</a>
+								</div>
+							</li>
+							<li class="cur">
+								<div class="recommend-word">
+									<a href="#" title="">孕妇热卖</a>
+								</div>
+							</li>	
+						</ul>
+					</div>  
+					<!-- 左边导航结束  -->
+			
+          
+					<div class="swiper-container" id="recom-banner">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide recom-slide">
+								<a href="../detail/detail.html" target="_blank" title="婴儿超柔棉柔巾6包*3提">			
+									<div class="pro-img">
+										<img src="../../static/Images/recom1.jpg" alt="">
+									</div>
+									<div class="good-name">
+										<p class="content">婴儿超柔棉柔巾6包*3提</p>
+									</div>
+									<div class="good-price">
+										<span class="discount-price">¥192</span>
+										<span class="original-price">¥384</span>
+									</div>
+								</a>
+						   </div>
+						   <div class="swiper-slide recom-slide">
+							<a href="../detail/detail.html" target="_blank" title="婴儿超柔棉柔巾6包*3提">			
+								<div class="pro-img">
+									<img src="../../static/Images/recom2.jpg" alt="">
+								</div>
+								<div class="good-name">
+									<p class="content">婴儿超柔棉柔巾6包*3提</p>
+								</div>
+								<div class="good-price">
+									<span class="discount-price">¥192</span>
+									<span class="original-price">¥384</span>
+								</div>
+							</a>
+					   </div>
+					   <div class="swiper-slide recom-slide">
+						<a href="../detail/detail.html" target="_blank" title="婴儿超柔棉柔巾6包*3提">			
+							<div class="pro-img">
+								<img src="../../static/Images/recom3.jpg" alt="">
+							</div>
+							<div class="good-name">
+								<p class="content">婴儿超柔棉柔巾6包*3提</p>
+							</div>
+							<div class="good-price">
+								<span class="discount-price">¥192</span>
+								<span class="original-price">¥384</span>
+							</div>
+						</a>
+				   </div>
+				   <div class="swiper-slide recom-slide">
+					<a href="../detail/detail.html" target="_blank" title="婴儿超柔棉柔巾6包*3提">			
+						<div class="pro-img">
+							<img src="../../static/Images/recom4.jpg" alt="">
+						</div>
+						<div class="good-name">
+							<p class="content">婴儿超柔棉柔巾6包*3提</p>
+						</div>
+						<div class="good-price">
+							<span class="discount-price">¥192</span>
+							<span class="original-price">¥384</span>
+						</div>
+					</a>
+				  </div>
+			</div>
+		</div>	
+
+
+            </div>
+        </div>
+	</div>
+<!-- 粉色轮播开始 -->
+	 <div class="container">
+			<div class="recom2">	
+	     <div class="swiper-container" id= "pink-recom2">
+			<div class="swiper-wrapper">
+						<div class="swiper-slide">
+								<a href="../detail/detail.html">
+									<img src="../../static/Images/sw1.jpg" height="250" width="370" alt="">
+								</a>
+						</div>
+						<div class="swiper-slide">
+								<a href="../detail/detail.html">
+									<img src="../../static/Images/sw2.jpg" height="250" width="370" alt="">
+								</a>
+						</div>
+						<div class="swiper-slide">
+								<a href="../detail/detail.html">
+										<img src="../../static/Images/sw3.jpg" height="250" width="370" alt="">
+								</a>
+						</div>
+						<div class="swiper-slide">
+								<a href="../detail/detail.html">
+									<img src="../../static/Images/sw4.jpg" height="250" width="370" alt="">
+								</a>
+						</div>		
+			 </div>	 	 
+		</div>
+		</div>
+</div> 
+<!-- 商品分类展示 -->
+
+<div class="container">
+<section class="section-wrap">
+</section>
+</div><!-- container end -->
+
+<!-- 楼梯 -->
+<div id="floor">
+   <ul>
+	   <li><i class="iconfont iconhot"></i><span>热卖推荐</span></li>
+	   <li><i class="iconfont iconbaby"></i><span>婴童</span></li>
+	   <li><i class="iconfont iconsvgwoman"></i><span>女士</span></li>
+	   <li><i class="iconfont iconhome"></i><span>家居</span></li>
+	   <li><i class="iconfont iconcall"></i><span>联系我们</span></li>
+	   <li><i class="iconfont iconarrow-up"></i><span>回到顶部</span></li>
+   </ul>
+
+</div>
+
+<!-- 联系我们 公共底部 -->
+<div class="footer">
+     <footer class="comm-footer-wrap bg-white">
+    <!-- 提示 -->
+        <div class="foot-tip">
+            <div class="container clearfix">
+                <div class="item">
+                    <span class="tip-word">7天退换货保障</span>
+                </div>
+                <div class="item">
+                    <span class="tip-word">满218元免费配送</span>
+                </div>
+                <div class="item">
+                    <span class="tip-word">全棉商品品质保证</span>
+                </div>
+            </div>
+        </div><!-- foot-tip end -->
+
+
+    <div class="comm-footer-all">
+        <div class="container">
+            <div class="comm-footer clearfix">
+                <div class="left clearfix">
+                    <dl>
+                        <dt>新手指南</dt>
+                        <dd><a href="https://www.purcotton.com/mall/memberLogin/toRegister.ihtml" title="" target="_blank">注册用户</a></dd>
+                        <dd><a href="https://www.purcotton.com/support/webbuy.html" title="" target="_blank">网站订购流程</a></dd>
+                        <dd><a href="https://www.purcotton.com/mall/member_rule/index.html" title="" target="_blank">会员特享政策</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>如何退款</dt>
+                        <dd><a href="https://www.purcotton.com/support/tuikuanfukuan.html" title="" target="_blank">如何付款/退款</a></dd>
+                        <dd><a href="https://www.purcotton.com/support/payfaq.html" title="" target="_blank">常见支付问题</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>配送方式</dt>
+                        <dd><a href="https://www.purcotton.com/support/kuandao.html" title="" target="_blank">款到快递范围及配送时间</a></dd>
+                        <dd><a href="https://www.purcotton.com/support/huodaopay.html" title="" target="_blank">货到付款范围及配送时间</a></dd>
+                        <dd><a href="https://www.purcotton.com/support/shoufeibiaozhun.html" title="" target="_blank">配送收费标准及验货签收</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>售后服务</dt>
+                        <dd><a href="https://www.purcotton.com/support/zhengce.html" title="" target="_blank">退换货政策</a></dd>
+                        <dd><a href="https://www.purcotton.com/support/banlituihuo.html" title="" target="_blank">如何办理退换货</a></dd>
+                        <dd><a href="https://www.purcotton.com/support/yinsi.html" title="" target="_blank">隐私声明</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>关于全棉</dt>
+                        <dd><a href="https://www.purcotton.com/mall/activity/2019/0129/p_zs.html" title="" target="_blank">商超合作</a></dd>
+                        <dd><a href="https://www.purcotton.com/mall/dianpu/index.html" title="" target="_blank">全棉店铺</a></dd>
+                        <dd><a href="https://www.purcotton.com/mall/yyzz/yyzz.html" title="" target="_blank">执照信息</a></dd>
+                    </dl>
+                </div>
+                <p class="hr"></p>
+                <div class="right">
+                    <ul class="clearfix">
+                        <li>
+                            <img src="https://res.purcotton.com/mres/res/mall/css/img/ewm.jpg" alt="" class="ewm">
+                            <p class="tips">
+                                下载全棉<span>App</span>有惊喜
+                            </p>
+                        </li>
+                        <li>
+                            <img src="https://res.purcotton.com/mres/res/mall/css/img/ewm2.jpg" alt="" class="ewm">
+                            <p class="tips">
+                                关注全棉<span>微信公众号</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- comm-footer end -->
+            <div class="comm-footer-bottom clearfix">
+                <div class="fl">
+                    <ul class="more-link clearfix">
+                        <li><a href="https://www.purcotton.com/mall/CommodityList/about_us.html" title="关于我们" target="_blank">关于我们</a></li>
+                        <li><a href="https://www.purcotton.com/mall/CommodityList/contact_us.html" title="联系我们" target="_blank">联系我们</a></li>
+                        <li><a href="http://purcotton.hotjob.cn/wt/purcotton/web/index" title="诚聘英才" target="_blank" rel="nofollow">诚聘英才</a></li>
+                        <li><a href="https://www.purcotton.com/mall/activity/2019/0129/p_zs.html" title="商超合作" target="_blank">商超合作</a></li>
+                    </ul>
+                    <p class="copyright">粤ICP备13084779号-2 Copyright &copy;2002-2017 深圳全棉时代科技有限公司 版权所有</p>
+                </div>
+                <div class="fr customer-services">
+                    <p class="title">客服中心</p>
+                    <p class="phone">400-608-1000</p>
+                    <p class="time">服务时间：<sapn>8:30 ~ 20:30</sapn></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!-- comm-footer-wrap end -->
+
+</footer><!-- comm-footer-wrap end -->
+
+
+<!-- </body>
+</html> -->
+
+</div>
+</body>
+
+<script type="text/javascript">
+
+// let moviesCache = new Map();
+// $(function(){
+// 	var start = 0;
+
+// 	$("#loadmoreBtn").click(function(){
+// 		$.ajax({
+// 			url : "http://localhost:9090/proxy/api.douban.com/v2/movie/in_theaters?count=6&start="+start, 
+// 			dataType: "json",
+// 			success : function(data){
+				
+// 				let movies = data.subjects;
+// 				movies.map(m=>{
+// 					moviesCache.set(m.id, m);
+// 				})
+// 				let tempstr = template("movie-temp", { list : movies });
+// 				$("#movies-wrapper").append(tempstr);
+				
+// 				start += 6;
+// 			}
+// 		});
+// 	})
+
+	// $("#movies-wrapper").on("click", "img", function(){
+
+		
+	// 	let movie = moviesCache.get( this.getAttribute('movieid') );
+	// 	let tempstr = template("movie-detail", movie);
+		
+	// 	$("#modal-wrap").html( tempstr );
+		
+	// 	$("#myModal").modal("show");
+	// 	// console.log(movie);
+		
+	// })
+// })
+	</script>
+</html>
+
+<!-- 此处是为了在页面 引入多个js文件 不是真正的page页面 真正的在style/pages中 -->
