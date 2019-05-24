@@ -24,21 +24,21 @@ gulp.task("compileJS", () => {
         .pipe(uglify())
         .pipe(gulp.dest("dist/scripts"))
 
-    gulp.src("src/pages/home/**/*.js")
+    gulp.src("src/pages/**/*.js")
         .pipe(babel({
             presets: ["@babel/env"]
         }))
         .pipe(uglify())
-        .pipe(gulp.dest("dist/pages/home"))
+        .pipe(gulp.dest("dist/pages"))
 
     gulp.src("src/static/**/*").pipe(gulp.dest("dist/static"));
     
-    gulp.src("src/pages/detail/**/*.js")
-    .pipe(babel({
-        presets: ["@babel/env"]
-    }))
-    .pipe(uglify())
-    .pipe(gulp.dest("dist/pages/detail"))
+    // gulp.src("src/pages/detail/**/*.js")
+    // .pipe(babel({
+    //     presets: ["@babel/env"]
+    // }))
+    // .pipe(uglify())
+    // .pipe(gulp.dest("dist/pages/detail"))
     
 })
 
@@ -68,13 +68,13 @@ gulp.task('fileinclude', function() {
       .pipe(gulp.dest('src/pages/home')); 
       //先用刚生成的引入了公共部分的home.html 覆盖src中没有公共部分的home.html 在编译html文件到dist文件中
 
-      gulp.src(['src/pages/detail/detail.html']) 
-      .pipe(fileinclude({
-        prefix: '@@', //把公共部分放到@@的地方
-        basepath: './src/pages/common' //公共文件的基础路径 是一个文件夹 
-         //basepath: '@file'
-      }))
-      .pipe(gulp.dest('src/pages/detail')); 
+    //   gulp.src(['src/pages/detail/detail.html']) 
+    //   .pipe(fileinclude({
+    //     prefix: '@@', //把公共部分放到@@的地方
+    //     basepath: './src/pages/common' //公共文件的基础路径 是一个文件夹 
+    //      //basepath: '@file'
+    //   }))
+    //   .pipe(gulp.dest('src/pages/detail')); 
   }); 
 // gulp.task("default",['fileinclude']);
 
