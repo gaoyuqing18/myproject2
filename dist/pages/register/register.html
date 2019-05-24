@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../static/scripts/require.js" data-main="register.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../../styles/pages/register/register.css">
+</head>
+<body class="pd0">
+    <div class="container clearfix pd40">
+		<div class="fl hd">
+			<a href="https://www.purcotton.com/" title="首页">
+				<img src="../../static/Images/register-logo.png" height="36" width="448" alt="">
+			</a>
+		</div>
+	</div>
+   
+    <div class="content-body">
+		<!-- 外框 -->
+		<div class="pop-wrap">
+			<!-- 注册框 -->
+			<form action="https://www.purcotton.com/mall/memberLogin/toRegisterSubmit.ihtml" method="post" id="register" name="register" >
+				<div class="register-wrap pop-item">
+					<div class="form-wrap">
+						<div class="title">
+							注册全棉时代会员
+						</div>
+						<div class="item">
+							<div class="input-wrap clearfix">
+								<input id="telephone" name="mobile" maxlength="11" class="input-box" type="text" placeholder="请输入手机号" onblur="checkmobileForNewPC();">
+							</div>
+						</div>
+						<div class="item">
+							<div class="input-wrap clearfix">
+								<input id="password" name="loginPassWord" class="input-box" type="password" placeholder="请输入密码" onblur="onPwdCheckForNewPC();">
+							</div>
+						</div>
+						<div class="item">
+							<div class="input-wrap clearfix">
+								<input id="re_password" class="input-box" type="password" placeholder="请再次输入密码确认" onblur="onPwd2CHeckForNewPC();">
+							</div>
+						</div>
+						
+						<div class="item word">
+							<p class="red" id="warnMsgReg"></p>
+							<span style="color:red"></span>
+						</div>
+						<div class="item" id="submitBtn">
+							<!-- <a href="javascript:;" class="btn btn-green btn-sm width100">注册 <i>&gt;</i></a> -->
+							<input type="button" value="注册&gt;" onclick="gotoRegisterForNewPC();" class="btn btn-green btn-sm width100">
+						</div>
+						<p class="hr"></p>
+						<div class="item">
+							<button onclick="changeToLogin();" class="btn btn-trans btn-sm width100"><i>&lt;</i> 已有帐号登录<button>
+						</div>
+					</div>
+				</div><!-- register-wrap end -->
+			</form>
+
+		</div><!-- pop-wrap end -->
+	</div><!-- content-body end -->
+
+
+</body>
+</html>

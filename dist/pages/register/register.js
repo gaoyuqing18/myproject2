@@ -1,1 +1,1 @@
-"use strict";
+"use strict";require(["../../static/conf/config.js"],function(){require(["jquery"],function(c){console.log(c)})});

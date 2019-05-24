@@ -41,8 +41,7 @@ require(["../../static/conf/config.js"], function () {
       success: function (data) {
         //console.log(data);
         let tempstr = template("item_templite", { list: data });
-       // console.log(tempstr);
-        // $(".section-content")[0].html() += tempstr;
+  
          $(".section-wrap")[0].innerHTML += tempstr;
 
       }
