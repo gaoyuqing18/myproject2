@@ -1,8 +1,8 @@
 require(["../../static/conf/config.js"], function () {
-    require(["jquery"], function ($) {
+    require(["jquery", "template"], function ($,template) {
      console.log($);
 
-   
+   //放大镜部分
        let $smallImg = $("#smallImg");  //小图片
 			let $smallGlass = $("#smallCursor"); //小放大镜
 			let $bigImg = $("#bigImg"); //大图片
@@ -17,6 +17,7 @@ require(["../../static/conf/config.js"], function () {
 			 },function(){//鼠标离开小图片 小放大镜隐藏 回调函数
 				 $smallGlass.hide();
 				 $bigGlass.hide();
+
 		 });
 			
 			 $smallImg.mousemove(function(e){//鼠标在小图上移动
@@ -35,6 +36,62 @@ require(["../../static/conf/config.js"], function () {
 					
 			 	})
 			 })
+
+
+			 //加入购物车
+
+		
+    //  let sectionWrap = $(".section-wrap").html();
+    // console.log(sectionWrap);
+    $.ajax({
+      url: "/static/json-data/items.json", //如果是服务器代理请求 这里应该请求代理服务器接口/item
+      dataType: "json",
+      success: function (data) {
+				console.log( data.detail[0].subTitle);
+				$(".goods-title").html(data.detail[0].title);
+				$(".detail").html(data.detail[0].subTitle);
+				$(".tag-name1").html(data.detail[0].information1);
+				$(".tag-name2").html(data.detail[0].information2);
+				$(".origin-price").html(data.detail[0].price);
+				$(".discount-price").html(data.detail[0].discountprice);
+
+				//console.log($("#goodsNo").attr("value"));
+			//	console.log($("#goodsNo").html());
+				var num= parseInt($("#goodsNo").html());
+				var price = parseInt($(".discount-price").html());
+				console.log(num);
+				 $(".reduce").on('click', function() {
+				console.log("ok");
+					 num=num-1 ; 
+					 if(num<=0)  {
+						 num=0;
+						$("#goodsNo").html(num);
+					 }else{
+						 $("#goodsNo").html(num);
+					 }	  
+				 })
+
+				 $(".plus").on('click', function() {
+					 num=num+1 ; 
+						$("#goodsNo").html(num);  
+				})
+				//点击加入购物车之后在获取num值
+				var num= parseInt($("#goodsNo").html());
+				console.log(num);
+				var totalPrice = num*price;
+				var data ={
+					goodtitle: 	data.detail[0].title,
+					 goodNo: data.detail[0].id,
+					 num: num,
+					 price: price,
+					 totalPrice: totalPrice
+				 }
+				 console.log(data);
+      }
+		}); 
+		
+
+
     })
   })
   

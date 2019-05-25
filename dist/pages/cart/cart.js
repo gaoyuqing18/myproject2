@@ -1,0 +1,1 @@
+"use strict";require(["../../static/conf/config.js"],function(){require(["jquery","template"],function(t,d){console.log(t);var i=t(".lctab");i.empty();var e=t('<tr class="tr1"><td width="426">商品名称 </td><td width="80">单价</td><td width="70">重量</td><td width="103">数量  </td><td width="90">活动优惠</td><td width="100">商品合计</td><td width="120">操作</td></tr>');i.append(e)})});

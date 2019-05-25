@@ -5,7 +5,7 @@
 }
 // 放大镜
 .goods-basic{
-    height: 580px;
+    height: 480px;
     background-color: #fff;
     position: relative;
     margin-top: 130px;
@@ -49,13 +49,24 @@
     position: absolute; left: 0px; top: 0px;
 }
 
+
+/* 商品基本信息 */
+.goods-basic {
+    padding: 50px 0 40px;
+}
+.goods-basic > .left {
+    width: 600px;
+}
+.goods-basic > .right {
+    width: 530px;
+}
 // 商品信息
 .goods-msg{
     width: 620px;
-    height: 556px;
+    height: 456px;
     background-color: #fff;
      color: #999999; 
-     padding: 24px 0 0 20px;
+     padding-left: 20px;
 }
 .goods-msg .goods-title {
     font-size: 22px;
@@ -105,5 +116,196 @@
     float: left;
     color: #ff7878;
     font-size: 22px;
+}
+//商品信息
+
+.goods-msg .choose-attrs > .dd {
+    float: left;
+    width: 438px;
+}
+.goods-msg .choose-attrs > .dd > a {
+    z-index: 10;
+    position: relative;
+    float: left;
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    /*margin: 10px 10px 0 0;*/
+    margin: 10px 10px 0 0;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #999999;
+    border: 1px solid #999999;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+.goods-msg .choose-attrs > .dd > a:hover {
+    border: 1px solid #00937f;
+}
+.goods-msg .choose-attrs > .dd > a.selected {
+    border: 1px solid #00937f;
+}
+.goods-msg .choose-attrs > .dd > a.selected > i {
+    display: block;
+}
+.goods-msg .choose-attrs > .dd > a.disabled {
+    background: #eeeeee;
+    border: 1px solid #eeeeee;
+    cursor: no-drop;
+}
+.goods-msg .choose-attrs > .dd > a > i {
+    z-index: 11;
+    display: none;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    width: 18px;
+    height: 18px;
+    background: url(../img/select.png) 0 0 no-repeat;
+}
+.goods-msg .tag {
+    line-height: 1.2;
+    margin-bottom: -10px;
+}
+.goods-msg .tag > .dd div {
+    margin-bottom: 5px;
+}
+.goods-msg .tag .tag-name {
+    color: #ffffff;
+    padding: 0px 6px 0 4px;
+    background: #ff7878;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.goods-msg .price {
+    margin-right: 40px;
+}
+.goods-msg .price, .goods-msg .integral {
+    float: left;
+    color: #ff7878;
+}
+
+.goods-msg .original-price {
+    color: #999999;
+    margin-left: 4px;
+    /*margin-right: 52px;*/
+    text-decoration: line-through;
+}
+.goods-msg .title {
+    /*margin-right: 4px;*/
+    font-size: 16px;
+    color: #999999;
+}
+.goods-msg .num {
+    float: left;
+    position: relative;
+    width: 120px;
+    height: 34px;
+    line-height: 34px;
+    margin: 10px 26px 0 0;
+    border: 1px solid #999999;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+.goods-msg .num .num-input {
+    display: block;
+    width: 50px;
+    height: 34px;
+    line-height: 34px;
+    margin: 0 auto;
+    color: #999999;
+    text-align: center;
+}
+.goods-msg .num .btn-operation {
+    position: absolute;
+    top: 0;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    cursor: pointer;
+}
+.goods-msg .num .btn-operation.reduce {
+    left: 0;
+    border-right: 1px solid #999999;
+}
+.goods-msg .num .btn-operation.plus {
+    right: 0;
+    border-left: 1px solid #999999;
+}
+.goods-msg .num-info {
+    float: left;
+}
+.goods-msg .num-info span {
+    margin-right: 6px;
+}
+.goods-msg .to-buy {
+    padding-top: 20px;
+}
+.goods-msg .to-buy .btn {
+    margin-right: 6px;
+    width: 130px;
+}
+.goods-msg .to-buy .attention {
+    width: 21px;
+    height: 16px;
+    margin-left: 20px;
+    padding-left: 22px;
+    cursor: pointer;
+    vertical-align: middle;
+    background: url(../../../static/Images/btn.png) 0px -52px no-repeat;
+}
+.goods-msg .to-buy .attention:hover {
+    background: url(../../../static/Images/btn.png) 0px -85px no-repeat;
+}
+.goods-msg .to-buy .contact {
+    width: 21px;
+    height: 16px;
+    margin-left: 20px;
+    padding-left: 22px;
+    background: url(../../../static/Images/btn.png) 0px -220px no-repeat;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.goods-msg .to-buy .contact:hover {
+    background: url(../../../static/Images/btn.png) 0px -264px no-repeat;
+}
+.goods-msg .to-buy .heart-gray {
+    background: url(../../../static/Images/btn.png) 0px -52px no-repeat;
+}
+.goods-msg .to-buy .heart-pink {
+    background: url(../../../static/Images/btn.png) 0px -85px no-repeat;
+}
+.goods-msg .buynow {
+    border: 1px solid #cccccc;
+    color: #999999;
+}
+.goods-msg .buynow:hover {
+    color: #ffffff;
+    background: #00937f;
+}
+.btn-green {
+    color: #ffffff !important;
+    background: #00937f;
+    border: 1px solid #00937f;
+}
+.btn-default {
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid transparent;
+}
+.btn {
+    display: inline-block;
+    display: inline;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
