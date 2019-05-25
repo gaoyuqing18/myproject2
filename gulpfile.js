@@ -75,6 +75,15 @@ gulp.task('fileinclude', function() {
          //basepath: '@file'
       }))
       .pipe(gulp.dest('src/pages/detail')); 
+
+      gulp.src(['src/pages/login/login.html']) 
+      .pipe(fileinclude({
+        prefix: '@@', //把公共部分放到@@的地方
+        basepath: './src/pages/common' //公共文件的基础路径 是一个文件夹 
+         //basepath: '@file'
+      }))
+      .pipe(gulp.dest('src/pages/login')); 
+      
   }); 
 // gulp.task("default",['fileinclude']);
 
@@ -87,11 +96,11 @@ gulp.task("server", function () {
     // webserver方法  浏览器地址栏直接写 http:localhost:8000/source路径 服务器会自动去找target路径
     gulp.src('dist')//读取dist是编译后可以运行的项目文件
         .pipe(webserver({
-            port: 9999,
+            port:9999,
             livereload: true,
             //热重载 改了任何html js文件 不用手动刷新页面就可以显示出来
         }));
-    //静态服务器实时监听文件有修改 就重新执行编译任务
+   // 静态服务器实时监听文件有修改 就重新执行编译任务
     gulp.watch("src/pages/**/*.js", ["compileJS"]);
     gulp.watch("src/scripts/**/*.js", ["compileJS"]);
     gulp.watch("src/styles/**/*.scss", ["compileCSS"]);

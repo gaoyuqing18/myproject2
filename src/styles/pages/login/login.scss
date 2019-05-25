@@ -1,25 +1,8 @@
 @charset "utf-8";
-@import "base";
+@import "../bgc";
+@import "../footer";
 
-    .pd40 {
-        padding: 40px;
-        height: 40px;
-        .hd{
-            height: 38px;
-        }
-    }
 
-.content-body {
-  background: #ffffff;
-  padding-top: 0;
-}
-.pop-wrap {
-  position: relative;
-  height: 600px;
-  margin-bottom: -60px;
-  background: url(../../../static/Images/login-register-bg.jpg) center top no-repeat;
-  /* background: url(https://res.purcotton.com/activity/2018/09/30/home/login-pc.jpg) center top no-repeat; */
-}
 .pop-item {
   position: absolute;
   left: 50%;
@@ -49,11 +32,6 @@
 }
 .pop-item .form-wrap .word {
   line-height: 1;
-  height: 20px;
-}
-#warnMsgReg{
-  display: inline-block;
-  height: 20px;
 }
 .pop-item .input-wrap {
   height: 38px;
@@ -74,9 +52,6 @@
   line-height: 38px;
   float: left;
 }
-// .pop-item .input-box:-webkit-autofill {
-//   -webkit-box-shadow: 0 0 0px 80px #FFF inset;
-// }
 .pop-item .width58 {
   width: 58%;
 }
@@ -204,30 +179,9 @@
   font-size: 20px;
   margin-left: 12px;
 }
-.btn-sm {
-    height: 38px;
-    line-height: 38px;
-    font-size: 14px;
-}
-
-.btn-green {
-    color: #ffffff !important;
-    background: #00937f;
-    border: 1px solid #00937f;
-}
-.btn {
-    display: inline-block;
-    display: inline;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.width100 {
-    width: 100%;
-}
 .btn-trans {
-    background: transparent;
-    color: #00937f !important;
+    background: 0 0;
+    color: #00937f!important;
     border: 1px solid #00937f;
+    display: block;
 }

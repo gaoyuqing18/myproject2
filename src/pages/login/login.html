@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../static/scripts/require.js" data-main="login.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../../styles/pages/login/login.css">
+</head>
+<body class="pd0">
+    <div class="container clearfix pd40">
+		<div class="fl hd">
+			<a href="https://www.purcotton.com/" title="首页">
+				<img src="../../static/Images/register-logo.png" height="36" width="448" alt="">
+			</a>
+		</div>
+    </div>
+    
+    <!-- 除头尾的内容部分 -->
+	<div class="content-body">
+            <!-- 外框 -->
+            <div class="pop-wrap">
+                <!-- 登录框 -->
+                <form action="login.ihtml" method="post" onSubmit="return loginShop()"  name="login" id="login" >
+                    <div class="login-wrap pop-item">
+                        <div class="code-tips bounce">
+                            <div class="triangle"></div>
+                            <div class="content">
+                                扫码下载APP，专享棉品50%OFF
+                            </div>
+                        </div>
+                        <div class="form-wrap">
+                            <div class="title">
+                                登录全棉时代
+                            </div>
+                            <div class="item">
+                                <div class="input-wrap clearfix">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <input id="loginName" name="loginName" class="input-box" type="text" placeholder="邮箱/用户名/已注册手机">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="input-wrap clearfix">
+                                    <i class="iconfont">&#xe629;</i>
+                                    <input id="loginPassword" name="loginPassword" class="input-box" type="password" placeholder="请输入密码">
+                                </div>
+                            </div>
+                            <div class="item word">
+                                <p class="red" id="warnMsgLog" style="color:red"></p>
+                            </div>
+                            <div class="item word">
+                                <div class="clearfix">
+                                    <div class="left">
+                                        <a href="#">忘记密码</a>                                    								
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <input type="button"  id="loginBtn" value="登录&gt;" class="btn btn-green btn-sm width100"/>
+                            </div>												
+                            <div class="item other-login word">
+                                使用合作帐号登录：
+                                <a href="https://www.purcotton.com/member/memberopenplatform/platformAccess.ihtml?platformType=1"><i class="iconfont" style="color: #32cced;">&#xe786;</i></a>
+                                <a href="https://www.purcotton.com/member/memberopenplatform/platformAccess.ihtml?platformType=2"><i class="iconfont" style="color: #f35959;">&#xe61a;</i></a>
+                                <a href="https://www.purcotton.com/member/memberopenplatform/platformAccess.ihtml?platformType=3"><i class="iconfont" style="color: #009fe7;">&#xe612;</i></a>
+                                <a href="https://www.purcotton.com/member/memberopenplatform/platformAccess.ihtml?platformType=8"><i class="iconfont" style="color: #32CD32;">&#xe66b;</i></a>
+                            </div>
+                            <p class="hr"></p>
+                            <div class="item">
+                                <a href="../../pages/register/register.html" class="btn btn-trans btn-sm width100"><i>&lt;</i> 全棉会员注册</a>
+                            </div>
+                        </div>
+                    </div><!-- login-wrap end -->
+                </form> 
+            </div><!-- pop-wrap end -->
+        </div><!-- content-body end -->
+    
+
+      <footer class="comm-footer-wrap bg-white">
+    <!-- 提示 -->
+        <div class="foot-tip">
+            <div class="container clearfix">
+                <div class="item">
+                    <span class="tip-word">7天退换货保障</span>
+                </div>
+                <div class="item">
+                    <span class="tip-word">满218元免费配送</span>
+                </div>
+                <div class="item">
+                    <span class="tip-word">全棉商品品质保证</span>
+                </div>
+            </div>
+        </div><!-- foot-tip end -->
+
+
+    <div class="comm-footer-all">
+        <div class="container">
+            <div class="comm-footer clearfix">
+                <div class="left clearfix">
+                    <dl>
+                        <dt>新手指南</dt>
+                        <dd><a href="https://www.purcotton.com/mall/memberLogin/toRegister.ihtml" title="" target="_blank">注册用户</a></dd>
+                        <dd><a href="https://www.purcotton.com/support/webbuy.html" title="" target="_blank">网站订购流程</a></dd>
+                        <dd><a href="https://www.purcotton.com/mall/member_rule/index.html" title="" target="_blank">会员特享政策</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>如何退款</dt>
+                        <dd><a href="https://www.purcotton.com/support/tuikuanfukuan.html" title="" target="_blank">如何付款/退款</a></dd>
+                        <dd><a href="https://www.purcotton.com/support/payfaq.html" title="" target="_blank">常见支付问题</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>配送方式</dt>
+                        <dd><a href="https://www.purcotton.com/support/kuandao.html" title="" target="_blank">款到快递范围及配送时间</a></dd>
+                        <dd><a href="https://www.purcotton.com/support/huodaopay.html" title="" target="_blank">货到付款范围及配送时间</a></dd>
+                        <dd><a href="https://www.purcotton.com/support/shoufeibiaozhun.html" title="" target="_blank">配送收费标准及验货签收</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>售后服务</dt>
+                        <dd><a href="https://www.purcotton.com/support/zhengce.html" title="" target="_blank">退换货政策</a></dd>
+                        <dd><a href="https://www.purcotton.com/support/banlituihuo.html" title="" target="_blank">如何办理退换货</a></dd>
+                        <dd><a href="https://www.purcotton.com/support/yinsi.html" title="" target="_blank">隐私声明</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>关于全棉</dt>
+                        <dd><a href="https://www.purcotton.com/mall/activity/2019/0129/p_zs.html" title="" target="_blank">商超合作</a></dd>
+                        <dd><a href="https://www.purcotton.com/mall/dianpu/index.html" title="" target="_blank">全棉店铺</a></dd>
+                        <dd><a href="https://www.purcotton.com/mall/yyzz/yyzz.html" title="" target="_blank">执照信息</a></dd>
+                    </dl>
+                </div>
+                <p class="hr"></p>
+                <div class="right">
+                    <ul class="clearfix">
+                        <li>
+                            <img src="https://res.purcotton.com/mres/res/mall/css/img/ewm.jpg" alt="" class="ewm">
+                            <p class="tips">
+                                下载全棉<span>App</span>有惊喜
+                            </p>
+                        </li>
+                        <li>
+                            <img src="https://res.purcotton.com/mres/res/mall/css/img/ewm2.jpg" alt="" class="ewm">
+                            <p class="tips">
+                                关注全棉<span>微信公众号</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- comm-footer end -->
+            <div class="comm-footer-bottom clearfix">
+                <div class="fl">
+                    <ul class="more-link clearfix">
+                        <li><a href="https://www.purcotton.com/mall/CommodityList/about_us.html" title="关于我们" target="_blank">关于我们</a></li>
+                        <li><a href="https://www.purcotton.com/mall/CommodityList/contact_us.html" title="联系我们" target="_blank">联系我们</a></li>
+                        <li><a href="http://purcotton.hotjob.cn/wt/purcotton/web/index" title="诚聘英才" target="_blank" rel="nofollow">诚聘英才</a></li>
+                        <li><a href="https://www.purcotton.com/mall/activity/2019/0129/p_zs.html" title="商超合作" target="_blank">商超合作</a></li>
+                    </ul>
+                    <p class="copyright">粤ICP备13084779号-2 Copyright &copy;2002-2017 深圳全棉时代科技有限公司 版权所有</p>
+                </div>
+                <div class="fr customer-services">
+                    <p class="title">客服中心</p>
+                    <p class="phone">400-608-1000</p>
+                    <p class="time">服务时间：<sapn>8:30 ~ 20:30</sapn></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!-- comm-footer-wrap end -->
+
+    
+</body>
+</html>
+
+

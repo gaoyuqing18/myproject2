@@ -17,7 +17,7 @@
 		</div>
 	</div>
    
-    <div class="content-body">
+	
 		<!-- 外框 -->
 		<div class="pop-wrap">
 			<!-- 注册框 -->
@@ -29,31 +29,30 @@
 						</div>
 						<div class="item">
 							<div class="input-wrap clearfix">
-								<input id="telephone" name="mobile" maxlength="11" class="input-box" type="text" placeholder="请输入手机号" onblur="checkmobileForNewPC();">
+								<input id="telephone" name="mobile" maxlength="11" class="input-box" type="text" placeholder="请输入手机号">
 							</div>
 						</div>
 						<div class="item">
 							<div class="input-wrap clearfix">
-								<input id="password" name="loginPassWord" class="input-box" type="password" placeholder="请输入密码" onblur="onPwdCheckForNewPC();">
+								<input id="password" name="loginPassWord" class="input-box" type="password" placeholder="请输入密码" >
 							</div>
 						</div>
 						<div class="item">
 							<div class="input-wrap clearfix">
-								<input id="re_password" class="input-box" type="password" placeholder="请再次输入密码确认" onblur="onPwd2CHeckForNewPC();">
+								<input id="re_password" name="loginPassWord2" class="input-box" type="password" placeholder="请再次输入密码确认" >
 							</div>
 						</div>
 						
 						<div class="item word">
-							<p class="red" id="warnMsgReg"></p>
-							<span style="color:red"></span>
+							<p class="red" id="warnMsgReg" style="color:red"></p>
 						</div>
 						<div class="item" id="submitBtn">
-							<!-- <a href="javascript:;" class="btn btn-green btn-sm width100">注册 <i>&gt;</i></a> -->
-							<input type="button" value="注册&gt;" onclick="gotoRegisterForNewPC();" class="btn btn-green btn-sm width100">
+							<!-- <a href="javascript:;" class="btn btn-green btn-sm width100">注册 <i>&gt;</i></a> onclick="gotoRegisterForNewPC();-->
+							<input type="button" value="注册&gt;"  class="btn btn-green btn-sm width100" >
 						</div>
 						<p class="hr"></p>
-						<div class="item">
-							<button onclick="changeToLogin();" class="btn btn-trans btn-sm width100"><i>&lt;</i> 已有帐号登录<button>
+						<div class="item haveAccount">
+							<a href="../../pages/login/login.html" class="btn btn-trans btn-sm width100"><i>&lt;</i> 已有帐号登录</a>
 						</div>
 					</div>
 				</div><!-- register-wrap end -->
