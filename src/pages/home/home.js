@@ -86,6 +86,20 @@ require(["../../static/conf/config.js"], function () {
 			}
     })
 
+
+    var localstorage = window.localStorage;
+    //console.log(localstorage.length);
+    for(var i=0;i<localstorage.length; i++) {
+        
+     
+        if(localstorage.key(i)==('buy'+sessionstorage.key(0))){
+         //console.log("ok");
+         var data = JSON.parse(localstorage.getItem(localstorage.key(i)));
+            //console.log(data.goodtitle);
+            var goodnum = data.num;
+       $("#catNum").html(goodnum);
+       }
+    }
   })
 })
 

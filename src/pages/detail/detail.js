@@ -50,7 +50,7 @@ require(["../../static/conf/config.js"], function () {
       url: "/static/json-data/items.json", //如果是服务器代理请求 这里应该请求代理服务器接口/item
       dataType: "json",
       success: function (data) {
-				console.log( data.detail[0].subTitle);
+			//	console.log( data.detail[0].subTitle);
 				$(".goods-title").html(data.detail[0].title);
 				$(".detail").html(data.detail[0].subTitle);
 				$(".tag-name1").html(data.detail[0].information1);
@@ -62,10 +62,10 @@ require(["../../static/conf/config.js"], function () {
 			//	console.log($("#goodsNo").html());
 				var num= parseInt($("#goodsNo").html());
 				var price = parseInt($(".discount-price").html());
-				console.log(num);
+			//	console.log(num);
 
 				 $(".reduce").on('click', function() {//减少按钮
-			     	console.log("ok");
+			     	//console.log("ok");
 					 num=num-1 ; 
 					 if(num<=0)  {
 						 num=0;
@@ -83,7 +83,7 @@ require(["../../static/conf/config.js"], function () {
 				//点击加入购物车之后在获取num值及商品相关信息，加入localStorage
 				$("#jCard").on('click', function() {
 							num= parseInt($("#goodsNo").html());
-							console.log(num);
+							//console.log(num);
 							var totalPrice = num*price;
 
 						if(window.localStorage&&(num!=0)){//浏览器支持localStorage
@@ -98,13 +98,14 @@ require(["../../static/conf/config.js"], function () {
 									price: price,
 									totalPrice: totalPrice
 								}
-								console.log(goodItemMsg);
-								console.log('buy'+sessionstorage.key(0));
+								//console.log(goodItemMsg);
+								//console.log('buy'+sessionstorage.key(0));
 								var listStr=JSON.stringify(goodItemMsg);  //数据转换成字符串
-								console.log(typeof listStr);
+								//console.log(typeof listStr);
 								
 								storage.setItem('buy'+sessionstorage.key(0),listStr);
-								//key 'buy'+用户名 value商品信息
+								//key 'buy'+用户名 value商品信息 
+								$("#catNum").html(num);
 							}
 				
 				})
@@ -115,7 +116,6 @@ require(["../../static/conf/config.js"], function () {
 
 
 		})
-		
 
 	})
 })
