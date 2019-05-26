@@ -53,7 +53,7 @@ require(["../../static/conf/config.js"], function () {
     }
   })
 
-//点击注册
+//点击注册 注册信息存储在localStorage  登录信息存在sessionStorage
    $("#submitBtn").on('click', function(){
      console.log("ok"); 
        var storage=window.localStorage;

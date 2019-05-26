@@ -5,6 +5,11 @@ require(["../../static/conf/config.js"], function () {
   //找配置文件  使用插件 
   require(["jquery", "sw", "template"], function ($, Swiper, template) {
   console.log($);
+  //更改登录用户名
+   var sessionstorage = window.sessionStorage;
+   var currentUser = sessionstorage.key(0);
+  $(".currentUser").html("尊敬的 "+currentUser+" 欢迎您！！！");
+
     //  轮播图
     var mySwiper1 = new Swiper('#ad-banner', {
       autoplay: true,//可选选项，自动滑动
@@ -51,7 +56,7 @@ require(["../../static/conf/config.js"], function () {
     // 楼梯部分
     var click = false;  //避免点击左侧导航与滚动页面同时起作用
     $(window).scroll( function(){//滚动页面时要计算滚动距离 停下来才显示用防抖
-     console.log($(this).scrollTop());
+     //console.log($(this).scrollTop());
       if( $(this).scrollTop() > 1000) {
         $("#floor").show();
       } else {

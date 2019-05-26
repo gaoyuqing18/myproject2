@@ -2,6 +2,11 @@ require(["../../static/conf/config.js"], function () {
     require(["jquery", "template"], function ($,template) {
      console.log($);
 
+		  //更改登录用户名
+			var sessionstorage = window.sessionStorage;
+			var currentUser = sessionstorage.key(0);
+		 $(".currentUser").html("尊敬的 "+currentUser+" 欢迎您！！！");
+ 	 
    //放大镜部分
        let $smallImg = $("#smallImg");  //小图片
 			let $smallGlass = $("#smallCursor"); //小放大镜
