@@ -60,8 +60,9 @@ require(["../../static/conf/config.js"], function () {
 				var num= parseInt($("#goodsNo").html());
 				var price = parseInt($(".discount-price").html());
 				console.log(num);
-				 $(".reduce").on('click', function() {
-				console.log("ok");
+
+				 $(".reduce").on('click', function() {//减少按钮
+			     	console.log("ok");
 					 num=num-1 ; 
 					 if(num<=0)  {
 						 num=0;
@@ -71,29 +72,45 @@ require(["../../static/conf/config.js"], function () {
 					 }	  
 				 })
 
-				 $(".plus").on('click', function() {
+				 $(".plus").on('click', function() {//添加按钮
 					 num=num+1 ; 
 						$("#goodsNo").html(num);  
 				})
-				//点击加入购物车之后在获取num值
-				var num= parseInt($("#goodsNo").html());
-				console.log(num);
-				var totalPrice = num*price;
-				var data ={
-					goodtitle: 	data.detail[0].title,
-					 goodNo: data.detail[0].id,
-					 num: num,
-					 price: price,
-					 totalPrice: totalPrice
-				 }
-				 console.log(data);
-      }
-		}); 
+
+				//点击加入购物车之后在获取num值及商品相关信息，加入localStorage
+				$("#jCard").on('click', function() {
+							num= parseInt($("#goodsNo").html());
+							console.log(num);
+							var totalPrice = num*price;
+
+						if(window.localStorage){//浏览器支持localStorage
+							var storage = window.localStorage; 
+								var goodItemMsg ={  //每一个商品存成一个对象
+									goodtitle: 	data.detail[0].title,
+									goodNo: data.detail[0].id,
+									num: num,
+									price: price,
+									totalPrice: totalPrice
+								}
+								console.log(goodItemMsg);
+								var listStr=JSON.stringify(goodItemMsg);  //数据转换成字符串
+								console.log(typeof listStr);
+								
+								storage.setItem(data.detail[0].id,listStr);
+							}
+				
+				})
+
+
+				
+		} 
+
+
+		})
 		
 
-
-    })
-  })
+	})
+})
   
   
   

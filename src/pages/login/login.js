@@ -11,13 +11,8 @@ require(["../../static/conf/config.js"], function () {
       var storage=window.localStorage;
       var phone= document.login.loginName.value;
      var userPassword= document.login.loginPassword.value;
-    //    for(var i=localStorage.length - 1 ; i >=0; i--){  
-    //     console.log("log:"+localStorage.key(i));  
-    //       console.log('第'+ (i+1) +'条数据的键值为：' + localStorage.key(i) +'，数据为：' + localStorage.getItem(localStorage.key(i)));  
-    //        }  
    
-      
-    var flag = false;
+      var flag = false;
         for(let i=0; i<storage.length; i++) {
             var userName = localStorage.key(i);
            if(userName==phone&&localStorage.getItem(userName)==userPassword){

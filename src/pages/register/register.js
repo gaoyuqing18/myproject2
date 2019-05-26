@@ -76,18 +76,6 @@ require(["../../static/conf/config.js"], function () {
           window.location.href='../login/login.html';
         }
 
-    // var data = {
-    //   phone: document.register.mobile.value,
-    //   userPassword: document.register.loginPassWord.value,
-    // }
-    //  console.log(data);
-    //        var d=JSON.stringify(data);
-    //        console.log(d);
-    //         //将JSON字符串转换成为JSON对象输出
-    //         var json=storage.getItem("data");
-    //         var jsonObj=JSON.parse(json);
-    //         console.log(typeof jsonObj);
-
     })
   })   
 })
