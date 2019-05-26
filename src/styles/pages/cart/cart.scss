@@ -1,13 +1,108 @@
 @charset "utf-8";
-@import "../base";
+@import "../header";
 
 .bigheader{
     width:100%;
-    height: 152px;
-    background-color: #00756e;
+    height: 130px;
+     background-color: #35b1a8;
+}
+.cbox {
+    border: 1px solid #dddddd;
+}
+.lctab {
+    border-top: 1px solid #dddddd;
+    width: 1090px;
+    font-size: 13px;
+    color: #646464;
+    font-weight: 400;
 }
 .lctab td {
     text-align: center;
     border-bottom: 1px solid #dddddd;
     padding: 8px 0;
+}
+.lctab td.td1, .lctab td.tdleft {
+    text-align: left;
+    text-indent: 12px;
+}
+.sub-h1nav {
+    font-family: "微软雅黑";
+    color: #646464;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+.imgnam {
+    text-indent: 0;
+    height: 64px;
+    vertical-align: middle;
+    display: table-cell;
+}
+.lctab td em {
+    font-size: 13px;
+}
+.cekbx {
+    float: left;
+    width: 13px;
+    margin-top: 20px;
+    margin-left: 13px;
+}
+.cekbx input[type='checkbox'] {
+    margin-left: -13px;
+}
+.lctab td img {
+    border: 1px solid #dedede;
+    width: 62px;
+    height: 62px;
+    vertical-align: middle;
+    margin: 0 8px;
+    float: left;
+}
+.imgnam a {
+    line-height: 23px;
+}
+.clor-blue1 {
+    color: #005aa0 !important;
+}
+a {
+    color: #333;
+    text-decoration: none;
+    outline: none;
+}
+.jjo {
+    width: 60px;
+    height: 22px;
+    margin: 0 auto;
+}
+.js {
+    border: 1px solid #dadada; 
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    float: left;
+    margin: 3px 0 0 0;
+    cursor: pointer;
+}
+.jxt {
+    width: 22px;
+    height: 16px;
+    border: 1px solid #dadada;
+    vertical-align: middle;
+    float: left;
+    margin: 0 4px;
+}
+.js2 {
+    border: 1px solid #dadada;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    float: left;
+    margin: 3px 0 0 0;
+    cursor: pointer;
+}
+.jjo i {
+    background: transparent;
+    display: block;
+    width: 1px;
+    height: 1px;
 }

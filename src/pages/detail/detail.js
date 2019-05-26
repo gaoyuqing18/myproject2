@@ -43,9 +43,7 @@ require(["../../static/conf/config.js"], function () {
 			 })
 
 
-			 //加入购物车
-
-		
+		//加入购物车
     //  let sectionWrap = $(".section-wrap").html();
     // console.log(sectionWrap);
     $.ajax({
@@ -91,6 +89,7 @@ require(["../../static/conf/config.js"], function () {
 						if(window.localStorage){//浏览器支持localStorage
 							var storage = window.localStorage; 
 								var goodItemMsg ={  //每一个商品存成一个对象
+									userName: sessionstorage.key(0),
 									goodtitle: 	data.detail[0].title,
 									goodNo: data.detail[0].id,
 									num: num,
@@ -102,6 +101,7 @@ require(["../../static/conf/config.js"], function () {
 								console.log(typeof listStr);
 								
 								storage.setItem(data.detail[0].id,listStr);
+								//key 商品编号 value商品信息
 							}
 				
 				})

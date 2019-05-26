@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>购物车</title>
     <script src="../../static/scripts/require.js" data-main="cart.js" charset="utf-8"></script>
 	<link rel="stylesheet" type="text/css" href="../../styles/pages/cart/cart.css">
 </head>
 <body>
-
- <div class="bigheader" >
- 
-
+    <header class="comm-header">
+        <div class="comm-top-wrap bg-green">
+            <div class="container">
+                <div class="comm-top clearfix">
+                    <div class="fl">
+                        <p class="slogan">医学贴近生活，全棉呵护健康</p>
+                    </div>
+                    <div class="top_link fr">
+                        <span id="top_member_new">
+                            <a href="../../pages/login/login.html" class="currentUser">登录</a>
+                            <a href="../../pages/register/register.html">注册</a>
+                        </span>
+                        <span>|</span>
+                        <a href="#" title="联系在线客服">客户服务</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> 
+ <div class="bigheader bg-green" >
  </div>
 
 <div class="container">
@@ -21,12 +37,73 @@
         <h1 class="sub-h1nav">我的购物车</h1>
         <div class="my_shoppingCart"><!--my_shoppingCart -->
             <div class="cbox">
-                <div class="ccx"><!--mysc_recommend -->
+                <!-- <div class="ccx">
     
-                    <ul class="ccxul clearfix"> <!-- cx_subList 活动代码-->            
+                    <ul class="ccxul clearfix">          
                     </ul>
-                </div>
+                </div> -->
                 <table class="lctab">
+                    <tr class="tr1">
+                        <th width="426">商品名称</th>
+                        <th width="80">单价</th>
+                        <th width="70">重量</th>
+                        <th width="103">数量</th>
+                        <th width="90">活动优惠</th>
+                        <th width="100">商品合计</th>
+                        <th width="120">操作</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <em class="cekbx">
+                                <input type="checkbox" class="che" name="prodNo" id="checkbox_800-001830" value="800-001830" checked="checked">
+                            </em>
+                            <div class="imge">
+                               <img src="https://res.purcotton.com//images/commodity/108001001/80000000/108000000003/E6C180D02C44FE935247E758FD55E314.jpg_100x100.jpg">
+                            </div>
+                            <div class="imgnam">
+                                <a target="_blank" href="https://www.purcotton.com/detail/830/800-001830.html" class="clor-blue1">袋装婴幼儿面部清洁专用纯棉柔巾 100抽/包 6包/提，3提</a>
+                             </div>
+                        </td>
+                          <td>162</td>
+                          <td>0 g</td>
+                          <td>
+                                <div class="jjo">
+                                    <button class="js fl">-</button>
+                                    <div class="jxt fl" id="num_800-001836">2</div>
+                                    <button class="js2 fl">+</button>
+                                    <i></i>
+                                </div>
+                           </td>
+                          <td>0</td>
+                          <td>162</td>
+                          <td> <a>收藏&nbsp;&nbsp;</a><a>删除</a></td>
+                    </tr>
+                    <tr>
+                            <td>
+                                <em class="cekbx">
+                                    <input type="checkbox" class="che" name="prodNo" id="checkbox_800-001830" value="800-001830" checked="checked">
+                                </em>
+                                <div class="imge">
+                                   <img src="https://res.purcotton.com//images/commodity/108001001/80000000/108000000003/E6C180D02C44FE935247E758FD55E314.jpg_100x100.jpg">
+                                </div>
+                                <div class="imgnam">
+                                    <a target="_blank" href="https://www.purcotton.com/detail/830/800-001830.html" class="clor-blue1">袋装婴幼儿面部清洁专用纯棉柔巾 100抽/包 6包/提，3提</a>
+                                 </div>
+                            </td>
+                              <td>162</td>
+                              <td>0 g</td>
+                              <td>
+                                    <div class="jjo">
+                                        <button class="js fl">-</button>
+                                        <div class="jxt fl" id="num_800-001836">2</div>
+                                        <button class="js2 fl">+</button>
+                                        <i></i>
+                                    </div>
+                               </td>
+                              <td>0</td>
+                              <td>162</td>
+                              <td> <a>收藏&nbsp;&nbsp;</a><a>删除</a></td>
+                        </tr>
                 </table> 
                 <div class="lcbubg1"><!--共节省-->
                 </div>  

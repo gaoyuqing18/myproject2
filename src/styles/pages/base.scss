@@ -55,3 +55,13 @@ html,body,input,button{
     border: none;
     outline: none;
 }
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+td, th {
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
