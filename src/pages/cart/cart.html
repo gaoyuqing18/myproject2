@@ -6,8 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>购物车</title>
     <script src="../../static/scripts/require.js" data-main="cart.js" charset="utf-8"></script>
-	<link rel="stylesheet" type="text/css" href="../../styles/pages/cart/cart.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="../../styles/pages/cart/cart.css">
+    <!-- -->
+</head> 
+<script id="goodsMsg_template" type="text/html">
+      <tr>
+            <td>
+                <em class="cekbx">
+                    <input type="checkbox" class="che" name="prodNo" id="checkbox_800-001830" value="800-001830" checked="checked">
+                </em>
+                <div class="imge">
+                    <img src="<%='https://res.purcotton.com/'+list.goodImg%>" style="width:100px;height:100px;">
+                </div>
+                <div class="imgnam">
+                    <a target="_blank" href="#" class="clor-blue1"><%=list.goodtitle%></a>
+                    </div>
+            </td>
+                <td>￥<%=list.price%></td>
+                <td>10 g</td>
+                <td>
+                    <div class="jjo">
+                        <button class="js fl">-</button>
+                        <div class="jxt fl" id="num_800-001836"><%=list.num%></div>
+                        <button class="js2 fl">+</button>
+                        <i></i>
+                    </div>
+                </td>
+                <td>0</td>
+                <td>￥<%=list.totalPrice%></td>
+                <td> 
+                    <button>收藏&nbsp;&nbsp;</button>
+                    <button>删除</button>
+                </td>
+    </tr>
+</script>
+
 <body>
     <header class="comm-header">
         <div class="comm-top-wrap bg-green">
@@ -52,7 +85,7 @@
                         <th width="100">商品合计</th>
                         <th width="120">操作</th>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>
                             <em class="cekbx">
                                 <input type="checkbox" class="che" name="prodNo" id="checkbox_800-001830" value="800-001830" checked="checked">
@@ -77,26 +110,7 @@
                           <td>0</td>
                           <td>162</td>
                           <td>收藏删除</td>
-                    </tr>
-                    <tr>
-                            <td>
-                                <em class="cekbx">
-                                    <input type="checkbox" class="che" name="prodNo" id="checkbox_800-001830" value="800-001830" checked="checked">
-                                </em>
-                                <div class="imge">
-                                   <img src="https://res.purcotton.com//images/commodity/108001001/80000000/108000000003/E6C180D02C44FE935247E758FD55E314.jpg_100x100.jpg">
-                                </div>
-                                <div class="imgnam">
-                                    <a target="_blank" href="https://www.purcotton.com/detail/830/800-001830.html" class="clor-blue1">袋装婴幼儿面部清洁专用纯棉柔巾 100抽/包 6包/提，3提</a>
-                                 </div>
-                            </td>
-                              <td>162</td>
-                              <td>0 g</td>
-                              <td>2</td>
-                              <td>0</td>
-                              <td>162</td>
-                              <td>收藏删除</td>
-                    </tr>
+                    </tr> -->
                 </table> 
                 <div class="lcbubg1"><!--共节省-->
                 </div>  

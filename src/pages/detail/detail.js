@@ -86,10 +86,12 @@ require(["../../static/conf/config.js"], function () {
 							console.log(num);
 							var totalPrice = num*price;
 
-						if(window.localStorage){//浏览器支持localStorage
+						if(window.localStorage&&(num!=0)){//浏览器支持localStorage
 							var storage = window.localStorage; 
 								var goodItemMsg ={  //每一个商品存成一个对象
+									
 									userName: sessionstorage.key(0),
+									goodImg: data.detail[0].prodPicUrl,
 									goodtitle: 	data.detail[0].title,
 									goodNo: data.detail[0].id,
 									num: num,
@@ -97,11 +99,12 @@ require(["../../static/conf/config.js"], function () {
 									totalPrice: totalPrice
 								}
 								console.log(goodItemMsg);
+								console.log('buy'+sessionstorage.key(0));
 								var listStr=JSON.stringify(goodItemMsg);  //数据转换成字符串
 								console.log(typeof listStr);
 								
-								storage.setItem(data.detail[0].id,listStr);
-								//key 商品编号 value商品信息
+								storage.setItem('buy'+sessionstorage.key(0),listStr);
+								//key 'buy'+用户名 value商品信息
 							}
 				
 				})
